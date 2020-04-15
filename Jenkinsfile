@@ -136,7 +136,7 @@ spec:
     imagePullPolicy: Always
     env:
       - name: JAVA_TOOL_OPTIONS
-        value: -Xmx6G
+        value: -Xmx2G
     resources:
       limits:
         memory: "4Gi"
