@@ -139,7 +139,7 @@ spec:
         value: -Xmx6G
     resources:
       limits:
-        memory: "10Gi"
+        memory: "4Gi"
         cpu: "2.0"
   - name: james-mail
     image: jakartaee/cts-mailserver:0.1
