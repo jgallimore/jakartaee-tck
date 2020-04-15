@@ -128,7 +128,6 @@ spec:
     env:
       - name: JNLP_PROTOCOL_OPTS
         value: "-XshowSettings:vm -Dsun.zip.disableMemoryMapping=true -Dorg.jenkinsci.remoting.engine.JnlpProtocol3.disabled=true"
-    args: ['\$(JENKINS_SECRET)', '\$(JENKINS_NAME)']
   - name: jakartaeetck-ci
     image: jakartaee/cts-base:0.1
     command:
