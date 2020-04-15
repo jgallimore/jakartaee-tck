@@ -127,11 +127,7 @@ spec:
   - name: jnlp
     env:
       - name: JNLP_PROTOCOL_OPTS
-        value: "-XshowSettings:vm -Xmx2048m -Dsun.zip.disableMemoryMapping=true -Dorg.jenkinsci.remoting.engine.JnlpProtocol3.disabled=true"
-    resources:
-      limits:
-        memory: "4Gi"
-        cpu: "2.0"
+        value: "-XshowSettings:vm -Dsun.zip.disableMemoryMapping=true -Dorg.jenkinsci.remoting.engine.JnlpProtocol3.disabled=true"
   - name: jakartaeetck-ci
     image: jakartaee/cts-base:0.1
     command:
