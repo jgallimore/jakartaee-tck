@@ -219,7 +219,7 @@ spec:
       }
     }
  
-    stage('jakartaeetck-run') {
+    /*stage('jakartaeetck-run') {
       when {
         expression {
           return params.BUILD_TYPE == 'CTS';
@@ -230,7 +230,7 @@ spec:
           parallel parallelCTSSuitesMap
         }
       }
-    }
+    }*/
  
     stage('standalone-tck-build') {
       when {
