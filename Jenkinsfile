@@ -127,7 +127,10 @@ spec:
   - name: jnlp
     env:
       - name: JNLP_PROTOCOL_OPTS
-        value: "-XshowSettings:vm -Dsun.zip.disableMemoryMapping=true -Dorg.jenkinsci.remoting.engine.JnlpProtocol3.disabled=true"
+        value: "-XshowSettings:vm -Xmx2048m -Dsun.zip.disableMemoryMapping=true -Dorg.jenkinsci.remoting.engine.JnlpProtocol3.disabled=true"
+    resources:
+      limits:
+        memory: 2176Mi
   - name: jakartaeetck-ci
     image: jakartaee/cts-base:0.1
     command:
@@ -219,7 +222,7 @@ spec:
       }
     }
  
-    /*stage('jakartaeetck-run') {
+    stage('jakartaeetck-run') {
       when {
         expression {
           return params.BUILD_TYPE == 'CTS';
@@ -230,7 +233,7 @@ spec:
           parallel parallelCTSSuitesMap
         }
       }
-    }*/
+    }
  
     stage('standalone-tck-build') {
       when {
